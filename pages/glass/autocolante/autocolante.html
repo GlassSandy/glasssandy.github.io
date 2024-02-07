@@ -169,15 +169,19 @@
 <div class="container">
     <div class="section">
         <blockquote>
-            <h6>Aici sunt prezentate diferite opțiuni de sticlă. <br>
-              Fiecare model poate fi disponibil in 4 culori. <br>
-              Alb cu negru, Crem cu negru, Auriu cu negru, Argintiu cu negru. <br>
-              De asemenea, se pot face pahare într-o singură culoare</h6>
-            <p>
-           
-            🇷🇴 Variante de seturi gata pentru nunta ta
-            </p>
-        </blockquote>
+          <h6>Aici sunt prezentate diferite opțiuni de sticlă</h6>
+          <div class="divider"></div>
+          <p>
+           Variații de seturi gata făcute pentru nunta. <br>
+           Aceste produse sunt produse în 4 culori principale:<br>
+           - Alb <br>
+           - Crem<br>
+           - Auriu<br>
+           - Argintiu<br>
+           Pot fi combinate și cu - Negru.  <br>
+           Culorile suplimentare pot să nu fie întotdeauna disponibile și sunt realizate prin comandă prealabilă, dacă posibil.
+          </p>
+      </blockquote>
         <div class="row">
 
               <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
@@ -186,7 +190,7 @@
 
                     <!--r1 i1-->
                     <script>
-                        const IMAGE_COUNT=8;
+                        const IMAGE_COUNT=14;
                         const IMAGE_NAME="ga_"
                         for (var currentImageNumber = 1; currentImageNumber <= IMAGE_COUNT; currentImageNumber++) {
                           document.write(
@@ -194,7 +198,7 @@
                                   <div class="col s12 m4">
                                       <div class="card hoverable">
                                           <div class="card-image">
-                                          <img class="materialboxed anysize_ht" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
+                                          <img class="materialboxed" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
                                           <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
                                           </div>
                                           </div>
@@ -326,6 +330,14 @@ var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
 });
+
+/* right click img */
+let allImages = document.querySelectorAll("img");
+allImages.forEach((value)=>{
+    value.oncontextmenu = (e)=>{
+        e.preventDefault();
+    }
+})
   </script>
 
   </body>

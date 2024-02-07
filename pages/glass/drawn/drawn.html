@@ -168,14 +168,36 @@
 
 <div class="container">
     <div class="section">
-        <blockquote>
-            <h6>На сторінці зображені всі можливі в нас види даного товару. Додаткову інформацію уточнювати в вайбері або телеграм.</h6>
-            <p>
-            🇺🇦 Варіації готових наборів для Вашого весілля <br>  
-            🇺🇸 Variations of ready sets for your wedding  <br>
-            🇷🇴 Variante de seturi gata pentru nunta ta
-            </p>
-        </blockquote>
+      <blockquote>
+        <h6>На сторінці зображені всі можливі в нас види даного товару. Додаткову інформацію уточнювати в вайбері або телеграм.</h6>
+        <div class="divider"></div>
+        <p>
+         🇺🇦 Варіації готових наборів для Вашого весілля <br>
+         Дані товари виробляються в 4 основних кольорах : <br>
+         - Білий<br>
+         - Крем<br>
+         - Золото<br>
+         - Срібло<br>
+         А також мають змогу комбінуватись з - Чорним<br>
+         Додаткові кольори не завжди можуть бути в наявності і виконуються за попереднім замовленням, якщо є така можливість.<br>  
+         🇺🇸 Variations of ready sets for your wedding  <br>
+         These products are produced in 4 main colors: <br>
+         - White <br>
+         - Cream<br>
+         - Gold<br>
+         - Silver<br>
+         They can also be combined with - Black. <br>
+         Additional colors may not always be available and are made by prior order, if possible.<br>  
+         🇷🇴 Variații de seturi gata făcute pentru nunta. <br>
+         Aceste produse sunt produse în 4 culori principale:<br>
+         - Alb <br>
+         - Crem<br>
+         - Auriu<br>
+         - Argintiu<br>
+         Pot fi combinate și cu - Negru.  <br>
+         Culorile suplimentare pot să nu fie întotdeauna disponibile și sunt realizate prin comandă prealabilă, dacă posibil.
+        </p>
+    </blockquote>
         <div class="row">
 
               <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
@@ -184,7 +206,7 @@
 
                     <!--r1 i1-->
                     <script>
-                        const IMAGE_COUNT=50;
+                        const IMAGE_COUNT=53;
                         const IMAGE_NAME="gd_"
                         for (var currentImageNumber = 1; currentImageNumber <= IMAGE_COUNT; currentImageNumber++) {
                           document.write(
@@ -324,6 +346,14 @@ var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
 });
+
+/* right click img */
+let allImages = document.querySelectorAll("img");
+allImages.forEach((value)=>{
+    value.oncontextmenu = (e)=>{
+        e.preventDefault();
+    }
+})
   </script>
 
   </body>

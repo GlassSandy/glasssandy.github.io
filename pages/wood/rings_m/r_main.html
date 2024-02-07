@@ -184,7 +184,7 @@
 
                     <!--r1 i1-->
                     <script>
-                        const IMAGE_COUNT=31;
+                        const IMAGE_COUNT=29;
                         const IMAGE_NAME="rw_"
                         for (var currentImageNumber = 1; currentImageNumber <= IMAGE_COUNT; currentImageNumber++) {
                           document.write(
@@ -419,6 +419,14 @@ var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
 });
+
+/* right click img */
+let allImages = document.querySelectorAll("img");
+allImages.forEach((value)=>{
+    value.oncontextmenu = (e)=>{
+        e.preventDefault();
+    }
+})
   </script>
 
   </body>

@@ -352,6 +352,14 @@ var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
 });
+
+/* right click img */
+let allImages = document.querySelectorAll("img");
+allImages.forEach((value)=>{
+    value.oncontextmenu = (e)=>{
+        e.preventDefault();
+    }
+})
   </script>
 
   </body>
