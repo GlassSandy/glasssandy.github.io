@@ -144,13 +144,13 @@
     <div class="container">
         <div class="parallax-container">
           <div class="parallax">
-                <div class="parallax"><img src="../../img_bg/iconsbg.jpg"></div> 
+                <div class="parallax"><img src="../../img_bg/icons_bg.jpg"></div> 
           </div>
           <br><br>
-          <div class="container">
-          <h1 class="header left-align deep-purple-text text-lighten-4">S.Glass</h1>
+          <div class="container text-title-color">
+          <h1 class="header left-align white-text">S.Glass</h1>
           <div class="divider"></div>
-          <h3 class="header left-align deep-purple-text text-lighten-4">Icons |</h1>
+          <h3 class="header left-align white-text ">Icons |</h1>
           </div>
           <!--<div class="row center">
             <h5 class="header col s12 light">Welcome to the page where most of our accessories are collected</h5>
@@ -185,7 +185,7 @@
                                   <div class="col s12 m4">
                                       <div class="card hoverable">
                                           <div class="card-image">
-                                          <img class="materialboxed" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
+                                          <img oncontextmenu="return false;"; class="materialboxed" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
                                           <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
                                           </div>
                                           </div>
@@ -220,7 +220,7 @@
                           <div class="col s12 m4">
                               <div class="card hoverable">
                                   <div class="card-image">
-                                  <img class="materialboxed" src="ph/${IMAGE_NAMEE}${currentImageNumber}.jpg">
+                                  <img oncontextmenu="return false;"; class="materialboxed" src="ph/${IMAGE_NAMEE}${currentImageNumber}.jpg">
                                   <span class="card-title">${IMAGE_NAMEE}${currentImageNumber}</span>
                                   </div>
                                   </div>
@@ -350,6 +350,7 @@ var elem = document.querySelector('.collapsible.expandable');
 var instance = M.Collapsible.init(elem, {
   accordion: false
 });
+
 
 /* right click img */
 let allImages = document.querySelectorAll("img");

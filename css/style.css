@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-html {font-family:"Rubik", sans-serif !important;}
+html {font-family:"Rubik", sans-serif;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+}
 
 .icon-block {
   padding: 0 15px;
@@ -36,6 +39,8 @@ blockquote {
 .main {
   background-color: white;
 }
+
+.text-title-color {background-color: rgba(213, 196, 236, 0.449);}
 
 /*STYLE FOR RESIZING IMG IF BROKEN*/
 .anysize_wd{
