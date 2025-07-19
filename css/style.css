@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+html {font-family:"Rubik", sans-serif;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+/*.top_welcome {}*/
+blockquote {
+  border-left-color: #e1bee7 !important;
+}
+
+#particles-js canvas {
+  display: block;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+  transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0
+}
+
+.main {
+  background-color: white;
+}
+
+.text-title-color {background-color: rgba(213, 196, 236, 0.449);}
+
+/*STYLE FOR RESIZING IMG IF BROKEN*/
+.anysize_wd{
+  height: 230px;
+}
+@media screen and (max-width: 1200px){.anysize_wd {height: 200px;}}
+@media screen and (max-width: 850px){.anysize_wd {height: 180px;}}
+@media screen and (max-width: 700px){.anysize_wd {height: 130px;}}
+@media screen and (max-width: 600px){.anysize_wd {height: auto;}}
+
+.anysize_ht{
+  height: 340px;
+}
+@media screen and (max-width: 850px){.anysize_ht {height: 270px;}}
+@media screen and (max-width: 700px){.anysize_ht {height: 200px;}}
+@media screen and (max-width: 600px){.anysize_ht {height: auto;}}
+
+
+.anysize_ht_glass{
+  height: 400px;
+}
+@media screen and (max-width: 900px){.anysize_ht_glass {height: 300px;}}
+@media screen and (max-width: 750px){.anysize_ht_glass {height: 200px;}}
+@media screen and (max-width: 600px){.anysize_ht_glass {height: auto;}}
+
+
+/*END OF STYLE NOT OT FRGT*/
