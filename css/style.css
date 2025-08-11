@@ -307,3 +307,50 @@ h4,
 nav ul a {
   font-size: 1.2em !important;
 }
+
+span.truncate {
+  white-space: normal !important; 
+  overflow: visible !important;
+  text-overflow: unset !important; }
+
+@media (min-width: 601px) and (max-width: 683px) {
+span.truncate {
+display: block !important;
+white-space: nowrap !important;
+overflow: hidden !important;
+text-overflow: ellipsis !important;
+} }
+
+/* FLOATING ACTION BUTTON */
+  /* Контейнер для FAB */
+  .fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25D366; /* зелёный WhatsApp */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+    z-index: 9999;
+  }
+
+  .fab:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  }
+
+  /* Изображение внутри кнопки */
+  .fab img.contact-icon {
+    width: 28px;
+    height: 28px;
+    user-select: none;
+    pointer-events: none; /* чтобы клик шел по ссылке */
+  }
+
+
+  
