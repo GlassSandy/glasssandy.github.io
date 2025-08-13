@@ -352,5 +352,11 @@ text-overflow: ellipsis !important;
     pointer-events: none; /* чтобы клик шел по ссылке */
   }
 
+  /* LOGO ALIGN */
+  a.brand-logo.logostyle {
+  display: flex; align-items: center;
+}
+  a.brand-logo img {
+  height: 65px; margin-right: 8px;
+}
 
-  
