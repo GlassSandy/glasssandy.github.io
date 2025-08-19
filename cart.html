@@ -349,7 +349,7 @@
             </div>
           </div>
       
-          <table class="striped responsive-table responsive-stack">
+          <table class="striped responsive-stack">
             <thead>
               <tr>
                 <th>Article</th>
@@ -395,11 +395,13 @@
       
           // Артикул
           const tdA = document.createElement('td');
-          tdA.textContent = it.article;
-          tr.appendChild(tdA);
+tdA.textContent = it.article;
+tdA.setAttribute('data-label', 'Article');
+tr.appendChild(tdA);
       
           // Количество
           const tdQ = document.createElement('td');
+          tdQ.setAttribute('data-label', 'Quantity');
           const qty = document.createElement('input');
           qty.type = 'number'; qty.min = '1'; qty.value = it.quantity;
           qty.className = 'browser-default';
@@ -414,6 +416,7 @@
       
           // Комментарий
           const tdC = document.createElement('td');
+          tdC.setAttribute('data-label', 'Comment');
           const cmt = document.createElement('input');
           cmt.type = 'text'; cmt.value = it.comment || '';
           cmt.className = 'browser-default';
@@ -427,6 +430,7 @@
       
           // Фото (миниатюра)
           const tdI = document.createElement('td');
+          tdI.setAttribute('data-label', 'Photo');
           const img = document.createElement('img');
           img.src = absUrl(it.imagePath);          /* Раньше было img.src = it.imagePath;  */  /* :contentReference[oaicite:3]{index=3} */
           img.alt = it.article;
@@ -435,11 +439,12 @@
       
           // Удалить
           const tdD = document.createElement('td');
+          tdD.setAttribute('data-label', 'Delete');
           const btn = document.createElement('button');
           btn.className = 'btn remove-btn';
           btn.innerHTML = '<i class="material-icons">delete</i>';
           btn.onclick = () => { 
-            const c = getCart(); c.splice(i,1); setCart(c); renderCart(); 
+            const c = getCart(); c.splice(i,1); setCart(c); renderCart('#cartTable'); 
           };
           tdD.appendChild(btn);
           tr.appendChild(tdD);
@@ -450,7 +455,7 @@
       
       function clearCart(){
         localStorage.removeItem('cart');
-        renderCart();
+        renderCart('#cartTable');
         if (window.M?.toast) M.toast({html:'Cart is Cleared'});
       }
       
@@ -602,7 +607,7 @@
           if (resp.ok) {
             if (window.M?.toast) M.toast({html:'Order Sent!'});
             localStorage.removeItem('cart');
-            renderCart();
+            renderCart('#cartTable');
           } else {
             if (window.M?.toast) M.toast({html:'Order was not sent!'});
           }
@@ -613,7 +618,7 @@
       }
       
       // ---------- init ----------
-      document.addEventListener('DOMContentLoaded', renderCart);
+      document.addEventListener('DOMContentLoaded', renderCart('#cartTable'));
       </script>
 
 

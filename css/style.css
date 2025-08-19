@@ -375,43 +375,82 @@ text-overflow: ellipsis !important;
       table img { width:64px; height:64px; }
     }
 
-/*ADAPTIVE TABLE FOR MOBILES*/
-    @media (max-width: 600px) {
-      table.responsive-stack thead { display: none; }
-      table.responsive-stack,
-      table.responsive-stack tbody,
-      table.responsive-stack tr,
-      table.responsive-stack td { display: block; width: 100%; }
-    
-      table.responsive-stack tr {
-        border: 1px solid #eee;
-        border-radius: 8px;
-        padding: 10px;
-        margin-bottom: 12px;
-        background: #fff;
-      }
-    
-      table.responsive-stack td {
-        border: 0;
-        border-bottom: 1px solid #f5f5f5;
-        padding: 6px 0;
-      }
-      table.responsive-stack td:last-child { border-bottom: 0; }
-    
-      /* подписи слева */
-      table.responsive-stack td[data-label]::before {
-        content: attr(data-label);
-        font-weight: 600;
-        display: inline-block;
-        min-width: 110px;
-        margin-right: 8px;
-        color: #555;
-      }
-    
-      table.responsive-stack img { width: 64px; height: 64px; object-fit: cover; }
-    }
+/* ADAPTIVE TABLE FOR MOBILES */
+@media (max-width: 600px) {
+  table.responsive-stack {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-    @media only screen and (max-width: 992px) {
-      table.responsive-table tbody tr {display:contents; }
+  table.responsive-stack thead {
+    display: none;
+  }
 
-    }
+  table.responsive-stack,
+  table.responsive-stack tbody,
+  table.responsive-stack tr,
+  table.responsive-stack td {
+    display: block;
+    width: 100%;
+  }
+
+  /* каждая строка как отдельная карточка */
+  table.responsive-stack tr {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+
+  table.responsive-stack td {
+    border: 0;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  table.responsive-stack td:last-child {
+    border-bottom: none;
+  }
+
+  /* подписи слева */
+  table.responsive-stack td[data-label]::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #444;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  /* картинка компактная */
+  table.responsive-stack img {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-left: auto;
+  }
+}
+
+/* Для мобильных — побольше превью */
+@media (max-width: 600px) {
+  table.responsive-stack img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px; /* чуть скруглить, красивее */
+  }
+}
+
+/* Для планшетов и ПК */
+@media (min-width: 601px) {
+  table.responsive-stack img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
