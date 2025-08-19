@@ -374,3 +374,44 @@ text-overflow: ellipsis !important;
       td input { width: 100%; box-sizing: border-box; }
       table img { width:64px; height:64px; }
     }
+
+/*ADAPTIVE TABLE FOR MOBILES*/
+    @media (max-width: 600px) {
+      table.responsive-stack thead { display: none; }
+      table.responsive-stack,
+      table.responsive-stack tbody,
+      table.responsive-stack tr,
+      table.responsive-stack td { display: block; width: 100%; }
+    
+      table.responsive-stack tr {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 12px;
+        background: #fff;
+      }
+    
+      table.responsive-stack td {
+        border: 0;
+        border-bottom: 1px solid #f5f5f5;
+        padding: 6px 0;
+      }
+      table.responsive-stack td:last-child { border-bottom: 0; }
+    
+      /* подписи слева */
+      table.responsive-stack td[data-label]::before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: inline-block;
+        min-width: 110px;
+        margin-right: 8px;
+        color: #555;
+      }
+    
+      table.responsive-stack img { width: 64px; height: 64px; object-fit: cover; }
+    }
+
+    @media only screen and (max-width: 992px) {
+      table.responsive-table tbody tr {display:contents; }
+
+    }

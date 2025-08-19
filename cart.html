@@ -336,20 +336,20 @@
         <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
         <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
         <div id="cartTable" class="cart-container">
-          <h5>Your shopping cart</h5>
+          <h5><i class="material-icons left">shopping_cart</i>Your shopping cart</h5>
       
           <div class="row">
             <div class="input-field col s12 m6">
               <input id="name" type="text" />
-              <label for="name">Name / Surname</label>
+              <label for="name"><i class="material-icons left">people</i>Name / Surname</label>
             </div>
             <div class="input-field col s12 m6">
               <input id="phone" type="text" />
-              <label for="phone">Phone</label>
+              <label for="phone"><i class="material-icons left">phone</i>Phone</label>
             </div>
           </div>
       
-          <table class="striped responsive-table">
+          <table class="striped responsive-table responsive-stack">
             <thead>
               <tr>
                 <th>Article</th>
@@ -363,9 +363,9 @@
           </table>
       
           <div class="actions" style="margin-top:16px">
-            <button class="btn green" onclick="sendOrder()">Send order</button>
-            <button class="btn blue" onclick="downloadPdfPreview()">Download PDF</button>
-            <button class="btn grey" onclick="clearCart()">Clear</button>
+            <button class="btn green" onclick="sendOrder()"><i class="material-icons left">mail_outline</i>Send order</button>
+            <button class="btn blue" onclick="downloadPdfPreview()"><i class="material-icons left">picture_as_pdf</i>Download PDF</button>
+            <button class="btn grey" onclick="clearCart()"><i class="material-icons left">close</i>Clear</button>
           </div>
         </div>
       

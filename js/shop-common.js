@@ -8,7 +8,7 @@ function generateProductCards(options) {
     const container = document.querySelector(mount);
   
     if (!container) {
-      console.warn(`Элемент ${mount} не найден`);
+      console.warn(`Element ${mount} did not found`);
       return;
     }
   
@@ -61,7 +61,7 @@ function generateProductCards(options) {
   
     localStorage.setItem('cart', JSON.stringify(cart));
     if (window.M && M.toast) {
-      M.toast({ html: 'Товар добавлен в корзину' });
+      M.toast({ html: 'Item is Added + ' });
     }
   });
   
@@ -75,7 +75,7 @@ function generateProductCards(options) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
   
     if (cart.length === 0) {
-      container.innerHTML = "<p>Корзина пуста</p>";
+      container.innerHTML = "<p>Cart is Empty</p>";
       return;
     }
   
@@ -84,11 +84,11 @@ function generateProductCards(options) {
       <table class="striped centered">
         <thead>
           <tr>
-            <th>Фото</th>
-            <th>Артикул</th>
-            <th>Кол-во</th>
-            <th>Комментарий</th>
-            <th>Удалить</th>
+            <th>Photo</th>
+            <th>Article</th>
+            <th>Quantity</th>
+            <th>Comment</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
