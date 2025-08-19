@@ -291,34 +291,12 @@
           Albe variante pentru nunta
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
+      <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+    <!--NEW ROW FOR ITEMS-->
+     <!--boxes for rings WHITE-->
+    <div id="prodA" class="row"></div>
 
-        <!--r1 i1-->
-        <script>
-          const IMAGE_COUNT = 35;
-          const IMAGE_NAME = "rw_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img oncontextmenu="return false;" class="materialboxed anysize_ht" src="ph/white/${IMAGE_NAME}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
+
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
 
@@ -330,30 +308,10 @@
         <p>Iată o fotografie doar cu cutii românești</p>
       </blockquote>
 
-      <div class="row">
-        <!--r2 i1-->
-        <script>
-          const IMAGE_COUNTT = 4;
-          const IMAGE_NAMEE = "rw_r_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                          <div class="col s12 m4">
-                              <div class="card hoverable">
-                                  <div class="card-image">
-                                  <img oncontextmenu="return false;" class="materialboxed anysize_ht" src="ph/white/rom/${IMAGE_NAMEE}${currentImageNumber}.jpg">
-                                  <span class="card-title">${IMAGE_NAMEE}${currentImageNumber}</span>
-                                  </div>
-                                  </div>
-                          </div>`
-            );
-          }
-        </script>
-      </div>
+       <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+    <!--NEW ROW FOR ITEMS-->
+     <!--boxes for rings WHITE ROMANIAN-->
+    <div id="prodB" class="row"></div>
 
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
@@ -369,34 +327,10 @@
           Argint / Auriu
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
-
-        <!--r3 i1-->
-        <script>
-          const IMAGE_COUNTR = 52;
-          const IMAGE_NAMER = "rcm_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTR;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img oncontextmenu="return false;" class="materialboxed anysize_wd" src="ph/color/${IMAGE_NAMER}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAMER}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
+      <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+    <!--NEW ROW FOR ITEMS-->
+     <!--boxes for rings COLOR-->
+    <div id="prodC" class="row"></div>
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
 
@@ -408,30 +342,10 @@
         <p>Iată o fotografie doar cu cutii românești</p>
       </blockquote>
 
-      <div class="row">
-        <!--r4 i1-->
-        <script>
-          const IMAGE_COUNTY = 4;
-          const IMAGE_NAMEY = "rc_r_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTY;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                          <div class="col s12 m4">
-                              <div class="card hoverable">
-                                  <div class="card-image">
-                                  <img oncontextmenu="return false;" class="materialboxed anysize_wd" src="ph/color/rom/${IMAGE_NAMEY}${currentImageNumber}.jpg">
-                                  <span class="card-title">${IMAGE_NAMEY}${currentImageNumber}</span>
-                                  </div>
-                                  </div>
-                          </div>`
-            );
-          }
-        </script>
-      </div>
+       <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+    <!--NEW ROW FOR ITEMS-->
+     <!--boxes for rings COLOR ROMANIAN-->
+    <div id="prodD" class="row"></div>
     </div>
   </div>
 
@@ -546,6 +460,9 @@
   <a href="https://wa.me/380954890658" target="_blank" class="fab pulse" aria-label="WhatsApp">
     <img src="../../../img_bg/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
   </a>
+  <a href="../../../cart.html" class="fab fab-cart" aria-label="Корзина">
+    <img src="../../../img_bg/cart.svg" alt="Корзина" class="contact-icon" />
+  </a>
   <!--FLOAT BUTTON MESSENGERS FINISH-->
 
 
@@ -583,6 +500,36 @@
         e.preventDefault();
       };
     });
+  </script>
+
+<script src="../../../js/shop-common.js"></script>
+
+<!-- ВЫЗОВЫ генератора (можно несколько раз на одной странице) -->
+<script>
+  generateProductCards({
+      count: 35,
+      imagePrefix: "rw_",
+      imageFolder: "pages/wood/rings_m/ph/white/",
+      mount: "#prodA"
+  });
+  generateProductCards({
+      count: 4,
+      imagePrefix: "rw_r_",
+      imageFolder: "pages/wood/rings_m/ph/white/rom/",
+      mount: "#prodB"
+  });
+  generateProductCards({
+      count: 52,
+      imagePrefix: "rcm_",
+      imageFolder: "pages/wood/rings_m/ph/color/",
+      mount: "#prodC"
+  });
+  generateProductCards({
+      count: 4,
+      imagePrefix: "rc_r_",
+      imageFolder: "pages/wood/rings_m/ph/color/rom/",
+      mount: "#prodD"
+  });
   </script>
 </body>
 

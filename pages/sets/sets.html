@@ -151,20 +151,20 @@
   <!--DROP FOR 2-->
   <ul id="dropdown2" class="dropdown-content">
     <li>
-      <a class="center-align" href="../woodbox_house/boxhouse.html"><i class="material-icons">home</i>Money boxes</a>
+      <a class="center-align" href="../wood/box_house/boxhouse.html"><i class="material-icons">home</i>Money boxes</a>
     </li>
     <li class="divider"></li>
     <li>
-      <a class="center-align" href="../woodrings_m/r_main.html"><i class="material-icons">favorite_border</i>Ring
+      <a class="center-align" href="../wood/rings_m/r_main.html"><i class="material-icons">favorite_border</i>Ring
         boxes</a>
     </li>
     <li>
-      <a class="center-align" href="../woodrings_sec/r_sec.html"><i class="material-icons">favorite</i>Ring boxes
+      <a class="center-align" href="../wood/rings_sec/r_sec.html"><i class="material-icons">favorite</i>Ring boxes
         VIP</a>
     </li>
     <li class="divider"></li>
     <li>
-      <a class="center-align" href="../woodhan_hold/hangs.html"><i class="material-icons">checkroom</i>Hangers &
+      <a class="center-align" href="../wood/han_hold/hangs.html"><i class="material-icons">checkroom</i>Hangers &
         supports</a>
     </li>
   </ul>
@@ -210,18 +210,18 @@
   <!--DROP FOR 2-->
   <ul id="dropdown2m" class="dropdown-content">
     <li>
-      <a href="../woodbox_house/boxhouse.html"><i class="material-icons">home</i>Money boxes</a>
+      <a href="../wood/box_house/boxhouse.html"><i class="material-icons">home</i>Money boxes</a>
     </li>
     <li class="divider"></li>
     <li>
-      <a href="../woodrings_m/r_main.html"><i class="material-icons">favorite_border</i>Rings</a>
+      <a href="../wood/rings_m/r_main.html"><i class="material-icons">favorite_border</i>Rings</a>
     </li>
     <li>
-      <a href="../woodrings_sec/r_sec.html"><i class="material-icons">favorite</i>Rings VIP</a>
+      <a href="../wood/rings_sec/r_sec.html"><i class="material-icons">favorite</i>Rings VIP</a>
     </li>
     <li class="divider"></li>
     <li>
-      <a href="../woodhan_hold/hangs.html"><i class="material-icons">checkroom</i>Supports UA/RO</a>
+      <a href="../wood/han_hold/hangs.html"><i class="material-icons">checkroom</i>Supports UA/RO</a>
     </li>
   </ul>
   <!--DROP FOR 3-->
@@ -284,34 +284,9 @@
           Variante de seturi gata pentru nunta ta
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
+      <!-- ROW 1 SETS BIG -->
+      <div id="prodB" class="row"></div>
 
-        <!--r1 i1-->
-        <script>
-          const IMAGE_COUNT = 25;
-          const IMAGE_NAME = "s_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img oncontextmenu="return false;" class="materialboxed anysize_wd" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
       <blockquote>
@@ -325,30 +300,10 @@
           Pahare, lumânări și un suport pentru lumânări.
         </p>
       </blockquote>
-      <div class="row">
-        <!--r2 i1-->
-        <script>
-          const IMAGE_COUNTT = 10;
-          const IMAGE_NAMEE = "sm_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                          <div class="col s12 m4">
-                              <div class="card hoverable">
-                                  <div class="card-image">
-                                  <img class="materialboxed anysize_ht" src="ph/${IMAGE_NAMEE}${currentImageNumber}.jpg">
-                                  <span class="card-title">${IMAGE_NAMEE}${currentImageNumber}</span>
-                                  </div>
-                                  </div>
-                          </div>`
-            );
-          }
-        </script>
-      </div>
+    
+      <!-- ROW 2 SETS SMALL -->
+      <div id="prodA" class="row"></div>
+
     </div>
   </div>
 
@@ -463,6 +418,9 @@
   <a href="https://wa.me/380954890658" target="_blank" class="fab pulse" aria-label="WhatsApp">
     <img src="../../img_bg/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
   </a>
+  <a href="../../cart.html" class="fab fab-cart" aria-label="Корзина">
+    <img src="../../img_bg/cart.svg" alt="Корзина" class="contact-icon" />
+  </a>
   <!--FLOAT BUTTON MESSENGERS FINISH-->
 
 
@@ -471,7 +429,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
-
   <script>
     /*Parallax*/
     $(document).ready(function () {
@@ -501,6 +458,25 @@
       };
     });
   </script>
-</body>
 
+<script src="../../js/shop-common.js"></script>
+
+<!-- ВЫЗОВЫ генератора (можно несколько раз на одной странице) -->
+<script>
+  generateProductCards({
+      count: 10,
+      imagePrefix: "sm_",
+      imageFolder: "pages/sets/ph/",
+      mount: "#prodA"
+  });
+
+  generateProductCards({
+      count: 25,
+      imagePrefix: "s_",
+      imageFolder: "pages/sets/ph/",
+      mount: "#prodB"
+  });
+  </script>
+
+</body>
 </html>

@@ -310,34 +310,11 @@
           realizate prin comandă prealabilă, dacă posibil.
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
 
-        <!--r1 i1-->
-        <script>
-          const IMAGE_COUNT = 29;
-          const IMAGE_NAME = "gp_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img oncontextmenu="return false;" class="materialboxed anysize_ht_glass" src="ph/${IMAGE_NAME}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
+   <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+   <!--NEW ROW FOR ITEMS-->
+   <div id="prodA" class="row"></div>
+   
       <div class="divider"></div>
     </div>
   </div>
@@ -453,6 +430,9 @@
   <a href="https://wa.me/380954890658" target="_blank" class="fab pulse" aria-label="WhatsApp">
     <img src="../../../img_bg/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
   </a>
+  <a href="../../../cart.html" class="fab fab-cart" aria-label="Корзина">
+    <img src="../../../img_bg/cart.svg" alt="Корзина" class="contact-icon" />
+  </a>
   <!--FLOAT BUTTON MESSENGERS FINISH-->
 
 
@@ -490,6 +470,18 @@
         e.preventDefault();
       };
     });
+  </script>
+
+<script src="../../../js/shop-common.js"></script>
+
+<!-- ВЫЗОВЫ генератора (можно несколько раз на одной странице) -->
+<script>
+  generateProductCards({
+      count: 29,
+      imagePrefix: "gp_",
+      imageFolder: "pages/glass/paint/ph/",
+      mount: "#prodA"
+  });
   </script>
 </body>
 

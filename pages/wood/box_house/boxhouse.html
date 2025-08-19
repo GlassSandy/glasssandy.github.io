@@ -290,34 +290,12 @@
           și aurii
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
 
-        <!--r1 i1-->
-        <script>
-          const IMAGE_COUNT = 26;
-          const IMAGE_NAME = "mdf_h_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img oncontextmenu="return false;" class="materialboxed anysize_ht" src="ph/houses/${IMAGE_NAME}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAME}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
+      <!--HOUSES COLOR-->
+       <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+      <!--NEW ROW FOR ITEMS-->
+      <div id="prodA" class="row"></div>
+
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
 
@@ -332,31 +310,10 @@
           Albe variante pentru nunta
         </p>
       </blockquote>
-
-      <div class="row">
-        <!--r2 i1-->
-        <script>
-          const IMAGE_COUNTT = 40;
-          const IMAGE_NAMEE = "mdf_bw_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTT;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                          <div class="col s12 m4">
-                              <div class="card hoverable">
-                                  <div class="card-image">
-                                  <img class="materialboxed anysize_wd" src="ph/boxes/white/${IMAGE_NAMEE}${currentImageNumber}.jpg">
-                                  <span class="card-title">${IMAGE_NAMEE}${currentImageNumber}</span>
-                                  </div>
-                                  </div>
-                          </div>`
-            );
-          }
-        </script>
-      </div>
+       <!--BOXES WHITE-->
+       <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+       <!--NEW ROW FOR ITEMS-->
+       <div id="prodB" class="row"></div>
 
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
@@ -372,34 +329,11 @@
           Argint / Auriu
         </p>
       </blockquote>
-      <div class="row">
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- TWO TYPES OF RESIZE 1-anysize_ht /// 2-anysize_wd /// FOR WIDE AND HEIGHT ORIENT IMG -->
-        <!-- WRITE THEM INTO IMG MATERIALBOXED class-->
+        <!--BOXES COLOR-->
+       <!--HERE UPDATED VERSION OF CARD GENERATOR-->
+      <!--NEW ROW FOR ITEMS-->
+      <div id="prodC" class="row"></div>
 
-        <!--r3 i1-->
-        <script>
-          const IMAGE_COUNTR = 77;
-          const IMAGE_NAMER = "mdf_bc_";
-          for (
-            var currentImageNumber = 1;
-            currentImageNumber <= IMAGE_COUNTR;
-            currentImageNumber++
-          ) {
-            document.write(
-              `
-                                  <div class="col s12 m4">
-                                      <div class="card hoverable">
-                                          <div class="card-image">
-                                          <img class="materialboxed anysize_wd" src="ph/boxes/color/${IMAGE_NAMER}${currentImageNumber}.jpg">
-                                          <span class="card-title">${IMAGE_NAMER}${currentImageNumber}</span>
-                                          </div>
-                                          </div>
-                                  </div>`
-            );
-          }
-        </script>
-      </div>
       <div class="divider"></div>
       <!--SEPARATION BETWEEN TYPES-->
     </div>
@@ -516,6 +450,9 @@
   <a href="https://wa.me/380954890658" target="_blank" class="fab pulse" aria-label="WhatsApp">
     <img src="../../../img_bg/whatsapp.svg" alt="WhatsApp" class="contact-icon" />
   </a>
+  <a href="../../../cart.html" class="fab fab-cart" aria-label="Корзина">
+    <img src="../../../img_bg/cart.svg" alt="Корзина" class="contact-icon" />
+  </a>
   <!--FLOAT BUTTON MESSENGERS FINISH-->
 
 
@@ -553,6 +490,30 @@
         e.preventDefault();
       };
     });
+  </script>
+
+<script src="../../../js/shop-common.js"></script>
+
+<!-- ВЫЗОВЫ генератора (можно несколько раз на одной странице) -->
+<script>
+  generateProductCards({
+      count: 26,
+      imagePrefix: "mdf_h_",
+      imageFolder: "pages/wood/box_house/ph/houses/",
+      mount: "#prodA"
+  });
+  generateProductCards({
+      count: 40,
+      imagePrefix: "mdf_bw_",
+      imageFolder: "pages/wood/box_house/ph/boxes/white/",
+      mount: "#prodB"
+  });
+  generateProductCards({
+      count: 77,
+      imagePrefix: "mdf_bc_",
+      imageFolder: "pages/wood/box_house/ph/boxes/color/",
+      mount: "#prodC"
+  });
   </script>
 </body>
 
