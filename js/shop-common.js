@@ -29,7 +29,7 @@ function generateProductCards(options) {
                  class="btn-floating btn-small white add-to-cart"
                  data-article="${article}"
                  data-img="${imgSrc}">
-                <i class="material-icons black-text">add</i>
+                <i class="material-icons black-text">add_shopping_cart</i>
               </button>
             </span>
           </div>
@@ -59,6 +59,6 @@ document.addEventListener('click', function (e) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   if (window.M && M.toast) {
-    M.toast({ html: 'Item is Added + ' });
+    M.toast({ html: 'Item has been added to Shopping Cart - <img src="/img_bg/cart.svg" alt="Корзина" class="contact-icon" /> ' });
   }
 });
